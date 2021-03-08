@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: black;
+  color: white;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  padding: 0;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  display: block;
+  padding: 1.5rem;
+  color: white;
+
+}
+
+a:hover {
+  color: #dfabea
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4rem;
+}
+
+.web-element {
+padding: 2rem;
+border: 2px solid #dfabea
+}
+
+picture {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+picture img {
+  max-width: 300px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content a {
+  text-decoration: none;
+  padding: 0px;
+  border-radius: 0.5rem;
+}
+
+.footer-content a:hover, a:focus {
+  opacity: 0.5;
+  background-color: white;
+}
