@@ -21,14 +21,14 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
-a {
+.web-element a {
   display: block;
   padding: 1.5rem;
   color: white;
 
 }
 
-a:hover {
+.web-element a:hover {
   color: #dfabea
 }
 
@@ -65,10 +65,24 @@ picture img {
 .footer-content a {
   text-decoration: none;
   padding: 0px;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
-.footer-content a:hover, a:focus {
-  opacity: 0.5;
-  background-color: white;
+.btn-social {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
 }
+
+.footer-content svg:hover {
+  fill: #dfabea;
+}
+
+.footer-content svg {
+  fill: white;
+  height: auto;
+  width: 64px;
+}
+
