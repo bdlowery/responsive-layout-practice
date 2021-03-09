@@ -1,0 +1,215 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+/* make images responsive */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  font-weight: lighter;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+h5,
+h6 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.105rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.526rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.895rem;
+  font-weight: 900;
+
+}
+
+.hero {
+  background:#23424A;
+  color: white;
+  padding: 100px 0;
+  /* border: 2px solid red; */
+}
+
+.hero-text {
+  /* border: 2px solid red; */
+}
+
+.hero-text p, h1 {
+  max-width: 500px;
+}
+
+.hero-image {
+  /* border: 2px solid red; */
+  margin-top: 2rem;
+}
+
+.information {
+  margin-top: 1rem;
+}
+
+.more-information {
+  max-width: 100%;
+  background: #136C72;
+}
+
+.first-col-text {
+/* border: 1px solid blue; */
+ max-width: 100%;
+}
+
+.first-col-text h2 {
+  color: #136C72;
+}
+
+.first-col-text p {
+  color: #23424A;
+}
+
+
+.second-col-text {
+  /* border: 2px solid red; */
+  text-align: center;
+  padding: 4rem;
+}
+
+
+.second-col-text h2, .second-col-text p{
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.second-col-text p {
+  padding-bottom: 4rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* border: 5px solid yellow; */
+}
+
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.8rem 2.5rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 2rem;
+  border: none;
+  background-color: rgba(56, 207, 217, 1);
+  color: rgba(7, 42, 45, 1);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+
+/* for computer screen */
+@media screen and (min-width: 1024px) {
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .first-col-text {
+     max-width: 500px;
+    }
+
+    .more-information {
+      max-width: 40%;
+    }
+
+    .hero-image {
+      margin-left: 2rem;
+      margin-top: 0rem;
+    }
+  /* look for a col that has a col next to it, and apply a margin left to whichever it finds */
+  .col + .col {
+    margin-top: 20px;
+  }
+
+  .split {
+    flex-direction: row;
+  
+  }
+
+  /* take split, grab the last child, put margin on the left side of it */
+  .split > * + * {
+    margin-left: 2rem;
+  }
+
+}

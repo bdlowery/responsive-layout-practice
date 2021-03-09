@@ -35,14 +35,18 @@ p {
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
   padding: 4rem;
 }
 
 .web-element {
-padding: 2rem;
-border: 2px solid #dfabea
+  padding: 2rem;
+  border: 2px solid #dfabea;
+}
+
+.web-element + .web-element {
+  margin-left: 1rem;
 }
 
 picture {
