@@ -1,7 +1,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -86,77 +88,11 @@ h2 {
   margin-top: 0;
   font-size: 1.895rem;
   font-weight: 900;
-
 }
 
-.hero {
-  background:#23424A;
-  color: white;
-  padding: 100px 0;
-  /* border: 2px solid red; */
-}
-
-.hero-text p, h1 {
-  max-width: 500px;
-}
-
-.hero-image {
-  /* border: 2px solid red; */
-  margin-top: 2rem;
-}
-
-.information {
-  margin-top: 1rem;
-}
-
-.more-information {
-  max-width: 100%;
-  background: #136C72;
-}
-
-.first-col-text {
-/* border: 1px solid blue; */
- max-width: 100%;
-}
-
-.first-col-text h2 {
-  color: #136C72;
-}
-
-.first-col-text p {
-  color: #23424A;
-}
-
-
-.second-col-text {
-  /* border: 2px solid red; */
-  text-align: center;
-  padding: 4rem;
-}
-
-
-.second-col-text h2, .second-col-text p{
-  margin-bottom: 0;
-  color: #fff;
-}
-
-.second-col-text p {
-  padding-bottom: 4rem;
-}
-
-.container {
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  /* border: 5px solid yellow; */
-}
-
-
-.row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+header {
+  background: #136c72;
+  padding: 1rem 0;
 }
 
 .btn {
@@ -172,6 +108,115 @@ h2 {
   margin-top: 1rem;
 }
 
+.nav-button {
+  border: 1px solid white;
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 1rem;
+}
+
+.nav-button-link {
+  color: #136c72;
+  text-decoration: none;
+}
+
+.nav-link:hover, .nav-button:hover {
+  text-decoration: underline;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  margin: 0 5rem;
+}
+
+.nav-item {
+  padding: 0 20px 0 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: white;
+}
+
+.hero {
+  background: #23424a;
+  color: white;
+  padding: 100px 0;
+  /* border: 2px solid red; */
+}
+
+.hero-text p,
+h1 {
+  max-width: 500px;
+}
+
+.hero-image {
+  /* border: 2px solid red; */
+  margin-top: 2rem;
+}
+
+.information {
+  margin-top: 1rem;
+}
+
+.more-information {
+  max-width: 100%;
+  background: #136c72;
+}
+
+.first-col-text {
+  /* border: 1px solid blue; */
+  max-width: 100%;
+}
+
+.first-col-text h2 {
+  color: #136c72;
+}
+
+.first-col-text p {
+  color: #23424a;
+}
+
+.second-col-text {
+  /* border: 2px solid red; */
+  text-align: center;
+  padding: 4rem;
+}
+
+.second-col-text h2,
+.second-col-text p {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.second-col-text p {
+  padding-bottom: 4rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* border: 5px solid yellow; */
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* for computer screen */
 @media screen and (min-width: 1024px) {
@@ -182,17 +227,17 @@ h2 {
   }
 
   .first-col-text {
-     max-width: 500px;
-    }
+    max-width: 500px;
+  }
 
-    .more-information {
-      max-width: 40%;
-    }
+  .more-information {
+    max-width: 40%;
+  }
 
-    .hero-image {
-      margin-left: 2rem;
-      margin-top: 0rem;
-    }
+  .hero-image {
+    margin-left: 2rem;
+    margin-top: 0rem;
+  }
   /* look for a col that has a col next to it, and apply a margin left to whichever it finds */
   .col + .col {
     margin-top: 20px;
@@ -200,12 +245,10 @@ h2 {
 
   .split {
     flex-direction: row;
-  
   }
 
   /* take split, grab the last child, put margin on the left side of it */
   .split > * + * {
     margin-left: 2rem;
   }
-
 }
