@@ -1,0 +1,180 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+/* make images responsive */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif, Arial !important;
+  font-size: 19px;
+  line-height: 1.3;
+  background-color: var(--background);
+}
+
+a,
+li,
+p,
+span {
+  color: var(--text);
+  margin: 0;
+}
+
+p {
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+hr {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px;
+}
+
+h1 {
+  font-family: "Roboto Slab";
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: "Roboto Slab";
+  font-size: 3rem;
+  font-weight: lighter;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Roboto Slab";
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+h4 {
+  font-family: "Roboto Slab";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+h5,
+h6 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 21px;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 36px;
+  margin-top: 0;
+}
+
+:root {
+  --color-primary-light: #f3eed9;
+  --color-primary-dark: #222C2A;
+}
+
+.bg-light {
+  background: var(--color-primary-light);
+}
+
+.bg-dark {
+  background: var(--color-primary-dark);
+  color: var(--color-primary-light);
+}
+
+.bg-dark p {
+  color: #fff;
+}
+
+.header--accent-text {
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header--main-text {
+  margin-top: 0;
+  font-size: 60px;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 7rem 0;
+}
+
+.container--narrow {
+  max-width: 850px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.flex-container img {
+  max-width: 344px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* Select any Element inside flex-row that has a sibling before it */
+  .flex-container {
+    flex-direction: row;
+  }
+  
+  .flex-container > * + * {
+    margin-left: 5.5rem;
+  }
+
+
+  /* .flex-container > * {
+    flex-basis: 100%;
+  } */
+}
