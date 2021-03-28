@@ -42,7 +42,6 @@ a,
 li,
 p,
 span {
-  color: var(--text);
   margin: 0;
 }
 
@@ -102,28 +101,51 @@ p {
 }
 
 h2 {
+  font-family: "Playfair Display";
   font-weight: 900;
   font-size: 36px;
   margin-top: 0;
 }
 
+h1 {
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-weight: 900;
+}
+
 :root {
-  --color-primary-light: #f3eed9;
-  --color-primary-dark: #222C2A;
+  --color-primary: #824936;
+  --color-light: #f3eed9;
+  --color-dark: #222C2A;
+}
+
+.bg-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.bg-primary h2, .bg-dark h2 {
+  color: var(--color-light);
+}
+
+.bg-white {
+  background: #fff;
+  color: var(--color-dark);
+}
+
+.bg-white h2, .bg-light h1 {
+  color: var(--color-primary);
 }
 
 .bg-light {
-  background: var(--color-primary-light);
+  background: var(--color-light);
 }
 
 .bg-dark {
-  background: var(--color-primary-dark);
-  color: var(--color-primary-light);
-}
-
-.bg-dark p {
+  background: var(--color-dark);
   color: #fff;
 }
+
 
 .header--accent-text {
   text-transform: uppercase;
