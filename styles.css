@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+  margin: 0;
   text-align: center;
   font-family: "Roboto Slab", serif;
   padding: 0;
@@ -19,6 +20,17 @@ h1 {
 
 p {
   font-family: "Open Sans", sans-serif;
+}
+
+header {
+  margin: 4rem;
+}
+
+.logo {
+  font-family: "Playfair Display";
+  font-size: 60px;
+  color: #dfabea;
+  font-weight: 900;
 }
 
 .web-element a {
@@ -38,7 +50,6 @@ p {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  padding: 4rem;
 }
 
 .web-element {
@@ -66,6 +77,7 @@ picture img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 4rem;
 }
 
 .footer-content {
@@ -76,7 +88,6 @@ picture img {
 .footer-content a {
   text-decoration: none;
   padding: 0px;
-  margin-bottom: 2rem;
   /* border-radius: 0.5rem; */
 }
 
