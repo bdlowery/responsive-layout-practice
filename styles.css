@@ -32,16 +32,18 @@ p {
   color: #dfabea
 }
 
-.container {
+.flex-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
   padding: 4rem;
 }
 
 .web-element {
   padding: 2rem;
+  margin: 10px;
   border: 2px solid #dfabea;
 }
 
@@ -66,10 +68,20 @@ picture img {
   align-items: center;
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: row;
+}
+
 .footer-content a {
   text-decoration: none;
   padding: 0px;
+  margin-bottom: 2rem;
   /* border-radius: 0.5rem; */
+}
+
+.footer-content > * + * {
+  margin-left: 1rem;
 }
 
 .btn-social {
