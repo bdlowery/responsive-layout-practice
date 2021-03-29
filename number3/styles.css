@@ -197,7 +197,7 @@ h1 {
 }
 
 .information {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .more-information {
@@ -208,6 +208,7 @@ h1 {
 .first-col-text {
   /* border: 1px solid blue; */
   max-width: 100%;
+  margin-right: 2rem;
 }
 
 .first-col-text h2 {
@@ -221,7 +222,7 @@ h1 {
 .second-col-text {
   /* border: 2px solid red; */
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .second-col-text h2,
@@ -241,6 +242,7 @@ h1 {
   /* border: 5px solid yellow; */
 }
 
+
 .row {
   display: flex;
   flex-direction: column;
@@ -250,7 +252,7 @@ h1 {
 
 
 /* for computer screen */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .row {
     flex-direction: row;
     justify-content: space-between;

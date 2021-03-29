@@ -147,6 +147,12 @@ h1 {
 }
 
 
+.intro {
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+}
+
 .header--accent-text {
   text-transform: uppercase;
   font-family: "Open Sans";
@@ -190,6 +196,7 @@ h1 {
   margin-top: 2rem;
 }
 
+
 @media screen and (min-width: 1024px) {
   /* Select any Element inside flex-row that has a sibling before it */
   .flex-container {
@@ -199,6 +206,10 @@ h1 {
   
   .flex-container > * + * {
     margin-left: 5.5rem;
+  }
+  
+  .col {
+    width: 100%;
   }
 
   /* .flex-container > * {
