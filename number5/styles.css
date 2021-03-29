@@ -75,3 +75,85 @@ p {
   font-weight: 400;
 }
 
+header {
+  background-image: url("./images/bg-pattern-intro.svg"),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-size: cover;
+
+  height: 500px;
+}
+
+.desktop-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.dropdown-container {
+  display: flex;
+}
+
+.logo {
+  display: block;
+  margin-right: 2rem;
+}
+.nav-flex-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 150px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.dropdown-content-product {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #f1f1f1;
+}
+.dropdown-content-company {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #f1f1f1;
+}
+.dropdown-content-connect {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #f1f1f1;
+}
+
+.dropdown-product:hover .dropdown-content-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-company:hover .dropdown-content-company {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-connect:hover .dropdown-content-connect {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+display: flex;
+flex-direction: column;
+align-items: center;
+align-content: center;
+}
+
+@media (min-width: 1024px) {
+}

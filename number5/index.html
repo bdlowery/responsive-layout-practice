@@ -20,12 +20,15 @@
     <header>
       <nav>
         <div class="mobile-nav"></div>
-
+        <div class="container nav-flex-container">
+        <div class="logo"><img src="./images/logo.svg" alt=""></div>
         <div class="desktop-nav">
-          <div class="logo"><img src="./images/logo.svg" alt=""></div>
+
+        
+          <div class="dropdown-container">
           <div class="dropdown-product">
             <button class="dropdown-btn">Product</button>
-            <div class="dropdown-content">
+            <div class="dropdown-content-product">
               <a href="#">Overview</a>
               <a href="#">Pricing</a>
               <a href="#">Marketplace</a>
@@ -35,7 +38,7 @@
           </div>
           <div class="dropdown-company">
             <button class="dropdown-btn">Company</button>
-            <div class="dropdown-content">
+            <div class="dropdown-content-company">
               <a href="#">About</a>
               <a href="#">Team</a>
               <a href="#">Blog</a>
@@ -45,28 +48,34 @@
 
           <div class="dropdown-connect">
             <button class="dropdown-btn">Connect</button>
-            <div class="dropdown-content">
+            <div class="dropdown-content-connect">
               <a href="#">Contact</a>
               <a href="#">Newsletter</a>
               <a href="#">LinkedIn</a>
             </div>
           </div>
-
+        </div>
+        <div>
           <a href="#">Login</a>
           <a href="#">Sign Up</a>
         </div>
+        </div>
+      </div>
       </nav>
-    </header>
 
-    <main>
-      <section class="hero">
+      <div class="hero container">
         <h1 class="hero__title">A modern publishing platform</h1>
 
         <p class="hero__text">Grow your audience and build your online brand</p>
+        <div class="hero__buttons">
         <button type="button">Start for Free</button>
 
         <button type="button">Learn More</button>
-      </section>
+      </div>
+      </div>
+    </header>
+
+    <main>
 
       <section class="product-intro">
         <div class="container">
