@@ -4,108 +4,154 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600"
-  />
-  
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600"
-  />
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,600,700,800,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,600,700,800,900"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,500,600,900"
+    />
+
     <title>Number 5</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="mobile-nav"></div>
-        <div class="container nav-flex-container">
-        <div class="logo"><img src="./images/logo.svg" alt=""></div>
-        <div class="desktop-nav">
+        <div class="mobile-nav">
+          <div class="mobile-logo"><img src="./images/logo.svg" alt="" /></div>
+          <button
+            aria-label="open menu"
+            id="menu-button"
+            class="hamburger hamburger--spring"
+            onclick="toggleNav()"
+            type="button"
+          >
+            <div class="hamburger-box">
+              <span aria-hidden="true" class="hamburger-inner"
+                ><img src="./images/icon-hamburger.svg" alt=""
+              /></span>
+              <span class="hamburger-menu-text">menu</span>
+            </div>
+          </button>
+        </div>
+        <div class="nav-flex-container">
+          <div class="logo"><img src="./images/logo.svg" alt="website logo" /></div>
+          <div class="desktop-nav">
+            <div class="dropdown-container">
+              <div class="dropdown-product">
+                <button class="dropdown-button">Product</button>
+                <div class="nav-arrow">
+                  <img src="./images/icon-arrow-light.svg" alt="arrow to show dropdown" />
+                </div>
 
-        
-          <div class="dropdown-container">
-          <div class="dropdown-product">
-            <button class="dropdown-btn">Product</button>
-            <div class="dropdown-content-product">
-              <a href="#">Overview</a>
-              <a href="#">Pricing</a>
-              <a href="#">Marketplace</a>
-              <a href="#">Features</a>
-              <a href="#">Integrations</a>
-            </div>
-          </div>
-          <div class="dropdown-company">
-            <button class="dropdown-btn">Company</button>
-            <div class="dropdown-content-company">
-              <a href="#">About</a>
-              <a href="#">Team</a>
-              <a href="#">Blog</a>
-              <a href="#">Careers</a>
-            </div>
-          </div>
+                <div class="dropdown-content-product">
+                  <a href="#">Overview</a>
+                  <a href="#">Pricing</a>
+                  <a href="#">Marketplace</a>
+                  <a href="#">Features</a>
+                  <a href="#">Integrations</a>
+                </div>
+              </div>
+              <div class="dropdown-company">
+                <button class="dropdown-button">Company</button>
+                <div>
+                  <img
+                    class="nav-arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow to show dropdown"
+                  />
+                </div>
 
-          <div class="dropdown-connect">
-            <button class="dropdown-btn">Connect</button>
-            <div class="dropdown-content-connect">
-              <a href="#">Contact</a>
-              <a href="#">Newsletter</a>
-              <a href="#">LinkedIn</a>
+                <div class="dropdown-content-company">
+                  <a href="#">About</a>
+                  <a href="#">Team</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Careers</a>
+                </div>
+              </div>
+
+              <div class="dropdown-connect">
+                <button class="dropdown-button">Connect</button>
+                <div>
+                  <img
+                    class="nav-arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow to show dropdown"
+                  />
+                </div>
+
+                <div class="dropdown-content-connect">
+                  <a href="#">Contact</a>
+                  <a href="#">Newsletter</a>
+                  <a href="#">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="desktop-nav__button-transparent"><a href="#">Login</a></button>
+              <button class="desktop-nav__button-white"><a href="#">Sign Up</a></button>
             </div>
           </div>
         </div>
-        <div>
-          <a href="#">Login</a>
-          <a href="#">Sign Up</a>
-        </div>
-        </div>
-      </div>
       </nav>
 
       <div class="hero container">
         <h1 class="hero__title">A modern publishing platform</h1>
 
         <p class="hero__text">Grow your audience and build your online brand</p>
-        <div class="hero__buttons">
-        <button type="button">Start for Free</button>
+        <div class="hero__button-container">
+          <button type="button" class="hero__button-white">Start for Free</button>
 
-        <button type="button">Learn More</button>
-      </div>
+          <button type="button" class="hero__button-transparent">Learn More</button>
+        </div>
       </div>
     </header>
 
     <main>
-
       <section class="product-intro">
-        <div class="container">
-          <h2 class="intro__title">Designed for the future</h2>
-          <div class="flex-container">
-            <div>
-              <h3 class="product-intro__sub-title">Introducing an extensible editor</h3>
-              <p class="intro__text">
+        <div class="container container--narrow">
+          <h2 class="section__title">Designed for the future</h2>
+          <div class="flex-container-reverse">
+            <div class="product-intro-text-container">
+              <h3 class="section__sub-title">Introducing an extensible editor</h3>
+              <p class="section__text">
                 Blogr features an exceedingly intuitive interface which lets you focus on one thing:
                 creating content. The editor supports management of multiple blogs and allows easy
                 manipulation of embeds such as images, videos, and Markdown. Extensibility with
                 plugins and themes provide easy ways to add functionality or change the looks of a
                 blog.
               </p>
-              <h3 class="intro__sub-title">Robust content management</h3>
-              Flexible content management enables users to easily move through posts. Increase the
-              usability of your blog by adding customized categories, sections, format, or flow.
-              With this functionality, you’re in full control.
-            </div>
 
-            <div><img src="./images/illustration-editor-desktop.svg" alt="" /></div>
+              <h3 class="section__sub-title">Robust content management</h3>
+              <p class="section__text">
+                Flexible content management enables users to easily move through posts. Increase the
+                usability of your blog by adding customized categories, sections, format, or flow.
+                With this functionality, you’re in full control.
+              </p>
+            </div>
+            <div class="illustration-editor-desktop">
+              <img src="./images/illustration-editor-desktop.svg" alt="" />
+            </div>
+            <div class="illustration-editor-mobile">
+              <img src="./images/illustration-editor-mobile.svg" alt="" />
+            </div>
           </div>
         </div>
       </section>
 
       <section class="product-benefits">
-        <div class="container">
+        <div class="product-benefits-background-image">
+        <div class="container--smaller">
           <div class="flex-container">
-            <div><img src="./images/illustration-phones.svg" alt="" /></div>
-            <div>
+            <div class="illustration-phones"><img src="./images/illustration-phones.svg" alt="" /></div>
+            <div class="product-benefits-text-container">
               <h2 class="benefits__title">State of the Art Infrastructure</h2>
               <p class="benefits__text">
                 With reliability and speed in mind, worldwide data centers provide the backbone for
@@ -115,22 +161,23 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
 
       <section class="product-extras">
         <div class="flex-container"></div>
         <div><img src="./images/illustration-laptop-desktop.svg" alt="" /></div>
         <div>
-          <h3 class="extras__sub-title">Free, open, simple</h3>
-          <p class="extras__text">
+          <h3 class="section-sub-title">Free, open, simple</h3>
+          <p class="section-text">
             Blogr is a free and open source application backed by a large community of helpful
             developers. It supports features such as code syntax highlighting, RSS feeds, social
             media integration, third-party commenting tools, and works seamlessly with Google
             Analytics. The architecture is clean and is relatively easy to learn.
           </p>
 
-          <h3 class="extras__sub-title">Powerful tooling</h3>
-          <p class="extras__text">
+          <h3 class="section__sub-title">Powerful tooling</h3>
+          <p class="section__text">
             Batteries included. We built a simple and straightforward CLI tool that makes
             customization and deployment a breeze, but capable of producing even the most
             complicated sites.
