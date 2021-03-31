@@ -15,6 +15,9 @@ p {
   margin: 0;
 }
 
+/* set the max-width of the body to 1440px 
+so the section backgrounds don't extend past the 1440px width 
+just like the container. */
 body {
   font-size: 19px;
   line-height: 1.3;
