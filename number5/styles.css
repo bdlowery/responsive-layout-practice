@@ -58,7 +58,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -455,7 +455,7 @@ HOVERS OVER the dropdown-product area */
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 1rem;
-  padding: 0.8rem 0.8rem;
+  padding: 0.8rem 1rem;
   color: hsl(356, 100%, 66%);
   font-size: 1rem;
   font-weight: 600;
@@ -472,7 +472,7 @@ HOVERS OVER the dropdown-product area */
   background-color: transparent;
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 1rem;
-  padding: 0.8rem 0.8rem;
+  padding: 0.8rem 1rem;
   color: hsl(0, 0%, 100%);
   font-size: 1rem;
   font-weight: 600;
