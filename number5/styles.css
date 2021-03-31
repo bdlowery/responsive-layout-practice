@@ -736,11 +736,16 @@ footer {
   .illustration-phones {
     margin-top: -150px;
     margin-bottom: -190px;
+    flex: 0 1 100%;
   }
   .illustration-phones img{
     max-width: none;
     margin-top: -150px;
     margin-bottom: -190px;
+  }
+
+  .product-benefits-text-container {
+    flex: 0 1 100%;
   }
 
   .product-benefits-background-image {
