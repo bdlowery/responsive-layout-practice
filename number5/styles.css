@@ -794,9 +794,19 @@ footer {
     align-items:flex-start;
   }
 
+  .footer--links a {
+    padding: 0 0 1rem 0;
+  }
+
+  .footer__title {
+    text-align: left;
+    padding: 0 0 2.5rem 0;
+  }
+
   .product-extras-text-container {
     flex: 0 1 100%;
     position: relative;
   }
+
 
 }
