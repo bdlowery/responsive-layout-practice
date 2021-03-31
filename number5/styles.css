@@ -78,7 +78,7 @@ p {
   margin-bottom: 1rem;
   margin-top: 1rem;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 header {
@@ -87,7 +87,7 @@ header {
     background-repeat: no-repeat;
   background-size: 150%;
   background-position-y: 50%;
-  height: 600px;
+
   border-radius: 0 0 0 6rem;
 }
 
@@ -437,9 +437,11 @@ HOVERS OVER the dropdown-product area */
   align-items: center;
   align-content: center;
   text-align: center;
+  padding-bottom: 10rem;
 }
 
 .hero__title {
+  font-size: 2.2rem;
   color:hsl(0, 0%, 100%);
   font-weight: 500;
 }
@@ -569,6 +571,10 @@ HOVERS OVER the dropdown-product area */
   display: none;
 }
 
+.illustration-laptop-mobile img {
+  max-width: none;
+}
+
 .flex-container-extras {
   display: flex;
   flex-direction: column;
@@ -612,11 +618,12 @@ footer {
 .footer__title {
   color: hsl(0, 0%, 100%);
   padding: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 0.3rem;
   margin-top: 0;
+  text-align: center;
 }
 .footer--links a {
-  padding: 1rem;
+  padding: 0.6rem;
   font-family: "Open Sans";
   color: hsl(240, 2%, 79%)
 }
@@ -631,9 +638,14 @@ footer {
 
 .footer-logo {
   display: block;
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 1200px) {
+
+  .hero__title {
+    font-size: 3rem;
+  }
   .illustration-laptop-mobile {
     display: none;
   }
