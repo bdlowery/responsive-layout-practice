@@ -641,7 +641,7 @@ footer {
   .illustration-laptop-desktop img {
     position: absolute;
     max-width: none;
-    width: 800px;
+    width: 950px;
     top: -23rem;
     right: 2rem;
   }
@@ -655,8 +655,8 @@ footer {
   .illustration-editor-desktop img {
     position: absolute;
     max-width: none;
-    width: 700px;
-    left: 7rem;
+    width: 900px;
+    left: 5.5rem;
     top: -27rem;
   }
 
