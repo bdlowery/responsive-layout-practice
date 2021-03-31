@@ -770,6 +770,10 @@ footer {
     justify-content: space-around;
   }
 
+  .footer--links {
+    align-items:flex-start;
+  }
+
   .product-extras-text-container {
     flex: 0 1 100%;
     position: relative;
