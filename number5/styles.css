@@ -629,6 +629,10 @@ footer {
   text-decoration-thickness: 2px;
 }
 
+.footer-logo {
+  display: block;
+}
+
 @media (min-width: 1200px) {
   .illustration-laptop-mobile {
     display: none;
@@ -694,9 +698,6 @@ footer {
 
   .mobile-nav {
     display: none;
-  }
-  .logo {
-    display: block;
   }
 
   .flex-container-reverse {
