@@ -10,7 +10,7 @@ html {
 body {
   font-size: 19px;
   line-height: 1.3;
-  overflow-x: hidden;
+  background-color: #FAFAFA;
 }
 
 /* make images responsive */
@@ -79,14 +79,19 @@ p {
 header {
   background-image: url("./images/bg-pattern-intro.svg"),
     linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-repeat: no-repeat;
   background-size: 150%;
   background-position-y: 50%;
   height: 600px;
   border-radius: 0 0 0 6rem;
 }
 
+main {
+  overflow:hidden;
+}
+
 .container {
-  width: 90%;
+  width: 85%;
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 5rem;
@@ -94,7 +99,7 @@ header {
 }
 
 .container--smaller {
-  width: 90%;
+  width: 85%;
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 5rem;
@@ -429,6 +434,16 @@ HOVERS OVER the dropdown-product area */
   text-align: center;
 }
 
+.hero__title {
+  color:hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+.hero__text {
+  color:hsl(0, 0%, 100%);
+  font-size: 1.2rem;
+}
+
 .hero__button-white {
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 100%);
@@ -514,7 +529,6 @@ HOVERS OVER the dropdown-product area */
 
 .product-intro {
   padding-bottom: 5rem;
-  background-color: #FAFAFA;
 }
 
 .product-intro-text-container {
@@ -558,15 +572,59 @@ HOVERS OVER the dropdown-product area */
   text-align:center;
 }
 
-.product-extras {
-  background-color: #FAFAFA;
-}
 
 footer {
   background: hsl(240, 10%, 16%);
+  border-radius: 0 6rem 0 0;
 }
 
-@media (min-width: 1024px) {
+.footer--container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.footer--flex-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer--flex-container > * + * {
+  margin-bottom: 2rem;
+}
+
+.footer--links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer__title {
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.footer--links a {
+  padding: 1rem;
+  font-family: "Open Sans";
+  color: hsl(240, 2%, 79%)
+}
+.footer--links a:link, .footer--links a:visited {
+  text-decoration: none;
+}
+
+.footer--links a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media (min-width: 1200px) {
   .illustration-laptop-mobile {
     display: none;
   }
@@ -576,7 +634,32 @@ footer {
 
   .illustration-laptop-desktop {
     display: block;
+    position: relative;
+    flex: 0 1 100%;
   }
+
+  .illustration-laptop-desktop img {
+    position: absolute;
+    max-width: none;
+    width: 800px;
+    top: -23rem;
+    right: 2rem;
+  }
+
+  .illustration-editor-desktop {
+    display: block;
+    flex: 0 1 100%;
+    position: relative;
+  }
+
+  .illustration-editor-desktop img {
+    position: absolute;
+    max-width: none;
+    width: 700px;
+    left: 7rem;
+    top: -27rem;
+  }
+
 
   .container {
     padding-top: 10rem;
@@ -584,13 +667,13 @@ footer {
   }
 
 
-  .product-intro {
+  /* .product-intro {
     background-image: url(./images/illustration-editor-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 925px 882px;
     background-position-y: 50%;
-    background-position-x: 145%;
-  }
+    background-position-x: 155%;
+  } */
   /* .illustration-editor-desktop {
     display: block;
     width: 40%;
@@ -615,7 +698,6 @@ footer {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    position: relative;
     justify-content: flex-start;
   }
   .section__text {
@@ -633,7 +715,8 @@ footer {
   .product-intro-text-container {
     display: flex;
     align-items:flex-start;
-    width: 50%;
+    position: relative;
+    flex: 0 1 100%;
   }
 
   .flex-container {
@@ -644,9 +727,6 @@ footer {
     text-align:left;
   }
 
-  .product-benefits-text-container {
-    width: 50%;
-  }
 
   .benefits__title {
     text-align: left;
@@ -654,6 +734,11 @@ footer {
   }
 
   .illustration-phones {
+    margin-top: -150px;
+    margin-bottom: -190px;
+  }
+  .illustration-phones img{
+    max-width: none;
     margin-top: -150px;
     margin-bottom: -190px;
   }
@@ -666,13 +751,6 @@ footer {
     background-position-x: -50%;
   }
 
-  .product-extras {
-    background-image: url(./images/illustration-laptop-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-position-y: 50%;
-    background-position-x: -44%;
-  }
 
   .flex-container-extras {
     display: flex;
@@ -681,9 +759,15 @@ footer {
     text-align:left;
   }
 
+  .footer--flex-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
   .product-extras-text-container {
-    
-    width: 50%;
+    flex: 0 1 100%;
+    position: relative;
   }
 
 }
