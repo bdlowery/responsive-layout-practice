@@ -7,24 +7,32 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubikk:400,500" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,500" />
 
     <title>Responsive Layout Number 5</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
-        <div class="mobile-nav"></div>
+        <div class="mobile-nav">
+          <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
+        </div>
 
         <div class="desktop-nav">
-          <a href="#">Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">Contact</a>
-          <button type="button" class="site-button--accent" onclick="location.href='#'">
-            Login
-          </button>
+        <div class="container">
+          <div class="flex-container-row">
+          <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
+          <div class="desktop__links">
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+            <button type="button" class="site-button--accent" onclick="location.href='#'">
+              Login
+            </button>
+          </div>
         </div>
+        </div>
+      </div>
       </nav>
     </header>
     <main>
