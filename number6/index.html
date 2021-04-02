@@ -21,7 +21,9 @@
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">Contact</a>
-          <button type="button" onclick="location.href='#'">Login</button>
+          <button type="button" class="site-button--accent" onclick="location.href='#'">
+            Login
+          </button>
         </div>
       </nav>
     </header>
@@ -168,45 +170,89 @@
       </section>
 
       <section class="faq">
-        <div class="faq__text">
-          Frequently Asked Questions Here are some of our FAQs. If you have any other questions
-          you’d like answered please feel free to email us.
+        <div class="container">
+          <div class="faq__text">
+            <h1>Frequently Asked Questions</h1>
+            <p>
+              Here are some of our FAQs. If you have any other questions you’d like answered please
+              feel free to email us.
+            </p>
+          </div>
+          <div class="faq__item">
+            <!-- Question 1 -->
+            <button type="button" class="faq__item-question site-button">What is Bookmark?</button>
+            <!-- Answer 1 -->
+            <p class="faq__item-answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
+              ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+            </p>
+          </div>
+          <div class="faq__item">
+            <!-- Question 2 -->
+            <button type="button" class="faq__item-question site-button">
+              How can I request a new browser?
+            </button>
+            <!-- Answer 2 -->
+            <p class="faq__item-answer">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+              ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris
+              augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="faq__item">
+            <!-- Question 3 -->
+            <button type="button" class="faq__item-question site-button">
+              Is there a mobile app?
+            </button>
+            <!-- Answer 3 -->
+            <p class="faq__item-answer">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
+              condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet
+              pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+          <div class="faq__item">
+            <!-- Question 4 -->
+            <button type="submit" class="faq__item-question site-button">
+              What about other Chromium browsers?
+            </button>
+            <!-- Answer 4 -->
+            <p class="faq__item-answer">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
+              dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit. More Info
+            </p>
+          </div>
         </div>
-
-        <!-- Question 1 -->
-        What is Bookmark?
-
-        <!-- Answer 1 -->
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
-        ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-        <!-- Question 2 -->
-        How can I request a new browser?
-
-        <!-- Answer 2 -->
-        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-        Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-        ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-        <!-- Question 3 -->
-        Is there a mobile app?
-
-        <!-- Answer 3 -->
-        Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
-        condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra
-        purus. Sed sollicitudin ex et ultricies bibendum.
-
-        <!-- Question 4 -->
-        What about other Chromium browsers?
-
-        <!-- Answer 4 -->
-        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui.
-        Aliquam vitae neque eget nisl gravida pellentesque non ut velit. More Info
       </section>
 
-      35,000+ already joined Stay up-to-date with what we’re doing Contact Us
+      <section class="newsletter">
+        <div class="container">
+          <p class="newsletter--accent-text">35,000+ already joined</p>
+          <h2 class="newsletter--header-text">Stay up-to-date with what we’re doing Contact Us</h2>
+
+          <div class="newsletter__input">
+            <input type="text" name="email-address" id="email-address" />
+            <button type="button" class="site-button--accent"></button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>Features Pricing Contact</footer>
+
+    <footer>
+      <div class="flex-container-row">
+        <img src="./images/logo-bookmark.svg" alt="bookmark-site logo in footer" />
+        <div class="footer__links">
+          <a href="#" class="footer__links-item">Features</a>
+          <a href="#" class="footer__links-item">Pricing</a>
+          <a href="#" class="footer__links-item">Contact</a>
+        </div>
+
+        <div class="footer__icons">
+          <img src="./images/icon-facebook.svg" alt="facebook icon" />
+          <img src="./images/icon-twitter.svg" alt="twitter icon" />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
