@@ -49,9 +49,7 @@ hr {
 
 h1 {
   font-family: "Rubik";
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
 }
 
@@ -95,14 +93,70 @@ h6 {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 2rem, 0;
 }
 
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 9rem;
+  left:66vw;
+  width: 100rem;
+  height: 20rem;
+  background-color: var(--color-primary-soft-blue);
+  border-radius: 100rem;
+
+}
+
 @media (min-width: 1200px) {
   .mobile-nav {
     display: none;
+  }
+
+  .desktop-nav {
+    padding: 4rem 0;
+  }
+
+  .nav-links {
+    margin-right: 2rem;
+  }
+
+  .hero-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .hero__text {
+    flex: 0 1 100%;
+  }
+  
+  .hero__text--narrow {
+    max-width: 500px;
+  }
+
+  .hero__logo {
+    flex: 0 1 130%;
+    transform: translateX(120px)
   }
 }

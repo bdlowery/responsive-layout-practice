@@ -23,9 +23,9 @@
           <div class="flex-container-row">
           <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
           <div class="desktop__links">
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contact</a>
+            <a class="nav-links" href="#">Features</a>
+            <a class="nav-links" href="#">Pricing</a>
+            <a class="nav-links" href="#">Contact</a>
             <button type="button" class="site-button--accent" onclick="location.href='#'">
               Login
             </button>
@@ -38,10 +38,10 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="flex-container-row">
+          <div class="hero-flex-container">
             <div class="hero__text">
               <h1>A Simple Bookmark Manager</h1>
-              <p>
+              <p class="hero__text--narrow">
                 A clean and simple interface to organize your favourite websites. Open a new browser
                 tab and see your sites load instantly. Try it for free.
               </p>
@@ -241,13 +241,14 @@
 
           <div class="newsletter__input">
             <input type="text" name="email-address" id="email-address" />
-            <button type="button" class="site-button--accent"></button>
+            <button type="button" class="site-button--accent">Contact Us</button>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
+      <div class="container">
       <div class="flex-container-row">
         <img src="./images/logo-bookmark.svg" alt="bookmark-site logo in footer" />
         <div class="footer__links">
@@ -261,6 +262,7 @@
           <img src="./images/icon-twitter.svg" alt="twitter icon" />
         </div>
       </div>
+    </div>
     </footer>
   </body>
 </html>
