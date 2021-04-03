@@ -204,7 +204,7 @@ h6 {
 .features {
   position: relative;
   overflow: hidden;
-  padding-bottom: 15rem;
+  padding-bottom: 12rem;
 }
 
 .features__nav-button {
@@ -321,6 +321,26 @@ h6 {
 
   .desktop-nav {
     padding: 2rem 0;
+  }
+
+  .faq-container {
+    width: 80%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .faq__text {
+    text-align: center;
+  }
+
+  .faq__text h2 {
+    color: var(--color-neutral-dark-blue);
+  }
+
+  .faq__text p {
+    color: var(--color-neutral-gray-blue);
   }
 
   .nav-links {

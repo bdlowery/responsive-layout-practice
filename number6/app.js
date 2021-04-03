@@ -44,3 +44,18 @@ if (buttonClick == "bookmark") {
 }
 
 }
+
+//FAQ ACCORDION
+//element.classList.contains(classname); <--- important
+
+//click button ----> onclick="faqClick('question1)"
+//const faqClick(question) = {}
+//add all buttons as variables with queryselector
+
+//if question == "question1"
+    //if elementname.classList.contains(is-active-class-name) === true
+      //remove it (aka close accordion, do it with a transition)
+    //else if elementname.classList.contains(is-active-class-name) === false
+      //add it to classList (like what was done in the first section of app.js)
+      //do with transition to make it look flow
+    
