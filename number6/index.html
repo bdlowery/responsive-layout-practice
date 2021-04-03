@@ -47,7 +47,7 @@
               </p>
               <div class="hero__buttons">
                 <button type="button" class="site-button">Get it on Chrome</button>
-                <button type="button">Get it on Firefox</button>
+                <button type="button" class="site-button--white">Get it on Firefox</button>
               </div>
             </div>
             <div class="hero__logo">
@@ -63,7 +63,7 @@
       <section class="features">
         <div class="container">
           <div class="flex-container-column">
-            <div class="features__text">
+            <div class="features__text features__text--narrow">
               <h2>Features</h2>
 
               <p>
@@ -71,19 +71,18 @@
                 bookmarks sync between your devices so you can access them on the go.
               </p>
             </div>
-            <div class="features__nav">
-              <div class="flex-container-row">
-                <button type="button" class="features__nav-button bookmark-button">
+
+              <div class="features__nav flex-container-row">
+                <button type="button" class="features__nav-button bookmark-button features__nav-button--is-active" onclick="featureClick('bookmark')">
                   Simple Bookmarking
                 </button>
-                <button type="button" class="features__nav-button search-button">
+                <button type="button" class="features__nav-button search-button" onclick="featureClick('search')">
                   Speedy Searching
                 </button>
-                <button type="button" class="features__nav-button share-button">
+                <button type="button" class="features__nav-button share-button" onclick="featureClick('share')">
                   Easy Sharing
                 </button>
               </div>
-            </div>
           </div>
 
           <div class="features__bookmark">
@@ -101,9 +100,11 @@
                 <button type="button" class="site-button">More Info</button>
               </div>
             </div>
+
           </div>
 
-          <div class="features__search">
+          <div class="features__search features__display-none">
+
             <div class="flex-container-row">
               <div class="features__search-image">
                 <img src="./images/illustration-features-tab-2.svg" alt="search tab image" />
@@ -118,9 +119,11 @@
                 <button type="button" class="site-button">More Info</button>
               </div>
             </div>
+
           </div>
 
-          <div class="features__share">
+          <div class="features__share features__display-none">
+
             <div class="flex-container-row">
               <div class="features__share-image">
                 <img src="./images/illustration-features-tab-3.svg" alt="share tab image" />
@@ -141,7 +144,8 @@
 
       <section class="download">
         <div class="container">
-          <div class="download__text">
+          <div class="flex-container-column">
+          <div class="download__text download__text--narrow">
             <h2>Download the extension</h2>
 
             <p>
@@ -149,29 +153,37 @@
               favourite you’d like us to prioritize.
             </p>
           </div>
+          </div>
 
-          <div class="desktop__cards flex-container-row">
+          <div class="desktop__cards flex-container-row-desktop__cards">
             <div class="desktop__cards-chrome">
+              <div class="flex-container-column">
               <img src="./images/logo-chrome.svg" alt="chrome logo" />
               <h3>Add to Chrome</h3>
               <p>Minimum version 62</p>
-              <div class="dash"></div>
-              <button type="button" class="site-button">Add & Install Extension</button>
+              <img class="dash" src="./images/bg-dots.svg" alt="">
+              <button type="button" class="site-button desktop__cards-button">Add & Install Extension</button>
+            </div>
             </div>
 
             <div class="desktop__cards-firefox">
+              <div class="flex-container-column">
               <img src="./images/logo-firefox.svg" alt="firefox logo" />
               <h3>Add to Firefox</h3>
               <p>Minimum version 55</p>
-              <div class="dash"></div>
-              <button type="button" class="site-button">Add & Install Extension</button>
+              <img class="dash" src="./images/bg-dots.svg" alt="">
+              <button type="button" class="site-button desktop__cards-button">Add & Install Extension</button>
             </div>
+            </div>
+
             <div class="desktop__cards-opera">
+              <div class="flex-container-column">
               <img src="./images/logo-opera.svg" alt="opera logo" />
               <h3>Add to Opera</h3>
               <p>Minimum version 46</p>
-              <div class="dash"></div>
-              <button type="button" class="site-button">Add & Install Extension</button>
+              <img class="dash" src="./images/bg-dots.svg" alt="">
+              <button type="button" class="site-button desktop__cards-button">Add & Install Extension</button>
+            </div>
             </div>
           </div>
         </div>
@@ -264,5 +276,6 @@
       </div>
     </div>
     </footer>
+    <script defer="" src="./app.js"></script>
   </body>
 </html>
