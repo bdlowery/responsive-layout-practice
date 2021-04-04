@@ -221,7 +221,7 @@ h6 {
 .hero {
   position: relative;
   overflow: hidden;
-  padding-bottom: 3rem;
+  padding-bottom: 7rem;
 }
 
 .hero-flex-container {
@@ -264,7 +264,7 @@ h6 {
 .features {
   position: relative;
   overflow: hidden;
-  height: 1300px;
+  height: 1400px;
   padding-bottom: 7rem;
 }
 
@@ -375,7 +375,7 @@ h6 {
   position: absolute;
   z-index: -2;
   top: 37rem;
-  right: 59vw;
+  right: 30vw;
   width: 100rem;
   height: 50vw;
   background-color: var(--color-primary-soft-blue);
@@ -390,8 +390,9 @@ h6 {
 .features__bookmark-text,
 .features__search-text,
 .features__share-text {
-  padding-top: 4rem;
+  padding-top: 6rem;
   text-align: center;
+  max-width: 450px;
 }
 
 .features__search-text p {
@@ -724,6 +725,31 @@ footer {
   transition: 0.2s ease-in-out;
 }
 
+@media (max-width: 460px) and (min-width: 320px) {
+  .features::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 44rem;
+    right: 24vw;
+    width: 100rem;
+    height: 40vw;
+    background-color: var(--color-primary-soft-blue);
+    border-radius: 100rem;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 6rem;
+    left: 25vw;
+    width: 100rem;
+    height: 40vw;
+    background-color: var(--color-primary-soft-blue);
+    border-radius: 100rem;
+  }
+}
 
 @media (min-width: 670px) {
   .features::before {
@@ -731,7 +757,7 @@ footer {
     position: absolute;
     z-index: -2;
     top: 36rem;
-    right: 59vw;
+    right: 30vw;
     width: 100rem;
     height: 22rem;
     background-color: var(--color-primary-soft-blue);
