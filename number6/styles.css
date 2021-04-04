@@ -93,7 +93,7 @@ h6 {
 
 .container {
   width: 80%;
-  max-width: 1440px;
+  max-width: 1300px;
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -125,11 +125,13 @@ h6 {
   border-radius: 0.4rem;
   padding: 0.8rem 1.5rem;
   font-weight: 500;
+  transition: 0.3s ease-in-out;
 }
 
 .site-button:hover {
   background: transparent;
   color: var(--color-primary-soft-blue);
+  transition: 0.3s ease-in-out;
 }
 
 .site-button--accent {
@@ -142,11 +144,18 @@ h6 {
   padding: 0.8rem 2.2rem;
   text-transform: uppercase;
   letter-spacing: 0.13rem;
+  transition: 0.3s ease-in-out;
 }
 
 .site-button--accent:hover {
-  background-color: #fff;
+  background: #fff;
   color: var(--color-primary-soft-red);
+
+  transition: 0.3s ease-in-out;
+}
+
+.site-button--accent:focus {
+  outline: none;
 }
 
 .site-button--white {
@@ -159,12 +168,14 @@ h6 {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 0.8rem 1.5rem;
   font-weight: 500;
+  transition: 0.3s ease-in-out;
 }
 
 .site-button--white:hover {
   background: transparent;
   color: var(--color-neutral-dark-blue);
-  border: 1px solid var(--color-neutral-dark-blue);
+  border: 2px solid var(--color-neutral-dark-blue);
+  transition: 0.3s ease-in-out;
 }
 
 .desktop-nav {
@@ -199,10 +210,12 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 2rem;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-links:hover {
   color: var(--color-primary-soft-red);
+  transition: 0.3s ease-in-out;
 }
 
 .hero {
@@ -266,7 +279,7 @@ h6 {
 .features__nav-button {
   position: relative;
   background-color: transparent;
-  color: var(--color-neutral-gray-blue);
+  color: var(--color-neutral-dark-blue);
   border: none;
   font-family: inherit;
   font-size: 17px;
@@ -275,6 +288,13 @@ h6 {
   padding-right: 5rem;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.features__nav-button:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
 }
 
 .features__text--narrow {
@@ -300,6 +320,10 @@ h6 {
   background-color: var(--color-primary-soft-red);
 }
 
+.features__nav-button--is-active {
+  opacity: 1;
+}
+
 .straight-line {
   width: 100%;
   border-bottom: 1px solid var(--color-neutral-gray-blue);
@@ -315,7 +339,7 @@ h6 {
 }
 
 .features__display-none {
-  display: none;
+  opacity: 0;
 }
 
 .features__search-image {
@@ -375,6 +399,14 @@ h6 {
 }
 
 .features__bookmark-text p {
+  color: var(--color-neutral-gray-blue);
+}
+
+.features__share-text h2 {
+  color: var(--color-neutral-dark-blue);
+}
+
+.features__share-text p {
   color: var(--color-neutral-gray-blue);
 }
 
@@ -551,6 +583,10 @@ h6 {
   color: var(--color-primary-soft-red);
 }
 
+.button--red:hover {
+  color: var(--color-primary-soft-red);
+}
+
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -653,9 +689,15 @@ footer {
 .footer__links-item {
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
   color: #fff;
   font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer__links-item:hover {
+  color: var(--color-primary-soft-red);
+  transition: 0.3s ease-in-out;
 }
 
 .footer__links-item + .footer__links-item {
@@ -739,7 +781,6 @@ footer {
     color: var(--color-neutral-gray-blue);
   }
 
-
   .hero-flex-container {
     display: flex;
     flex-direction: row;
@@ -792,7 +833,7 @@ footer {
   .features__nav-button {
     position: relative;
     background-color: transparent;
-    color: var(--color-neutral-gray-blue);
+    color: var(--color-neutral-dark-blue);
     border: none;
     border-bottom: 1px solid rgba(145, 148, 161, 0.5);
     font-family: inherit;
@@ -802,6 +843,12 @@ footer {
     padding-right: 3rem;
     padding-bottom: 2rem;
     padding-top: none;
+
+    opacity: 0.6;
+  }
+
+  .features__nav-button--is-active {
+    opacity: 1;
   }
 
   .features::before {
@@ -809,7 +856,7 @@ footer {
     position: absolute;
     z-index: -2;
     top: 28rem;
-    right: 59vw;
+    right: 63vw;
     width: 100rem;
     height: 22rem;
     background-color: var(--color-primary-soft-blue);
@@ -918,6 +965,7 @@ footer {
     justify-content: center;
     align-content: center;
     padding-top: 0;
+    margin-left: 3rem;
   }
 
   .footer__logo {
@@ -927,14 +975,21 @@ footer {
   .footer__links-item + .footer__links-item {
     padding-top: 0;
     margin-left: 2rem;
-
   }
 
   .footer__icons {
     padding-top: 0;
   }
 
-  .flex-container-footer svg {
-    margin-right: 4rem;
+  .footer__icons > * + * {
+    margin-left: 2rem;
+  }
+  .footer__icons svg:hover * {
+    fill: #fa5757;
+    transition: 0.2s ease-in-out;
+  }
+
+  .footer__icons svg * {
+    transition: 0.2s ease-in-out;
   }
 }
