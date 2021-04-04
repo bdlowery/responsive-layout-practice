@@ -704,6 +704,19 @@ footer {
   padding-top: 1.5rem;
 }
 
+.footer__icons > * + * {
+  margin-left: 2rem;
+}
+.footer__icons svg:hover * {
+  fill: #fa5757;
+  transition: 0.2s ease-in-out;
+}
+
+.footer__icons svg * {
+  transition: 0.2s ease-in-out;
+}
+
+
 @media (min-width: 670px) {
   .features::before {
     content: "";
@@ -972,24 +985,8 @@ footer {
     padding: 0;
   }
 
-  .footer__links-item + .footer__links-item {
-    padding-top: 0;
-    margin-left: 2rem;
-  }
-
   .footer__icons {
     padding-top: 0;
   }
 
-  .footer__icons > * + * {
-    margin-left: 2rem;
-  }
-  .footer__icons svg:hover * {
-    fill: #fa5757;
-    transition: 0.2s ease-in-out;
-  }
-
-  .footer__icons svg * {
-    transition: 0.2s ease-in-out;
-  }
 }
