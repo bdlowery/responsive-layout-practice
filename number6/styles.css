@@ -989,4 +989,9 @@ footer {
     padding-top: 0;
   }
 
+  .footer__links-item + .footer__links-item {
+    padding-top: 0;
+    margin-left: 2rem;
+  }
+
 }
