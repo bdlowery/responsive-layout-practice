@@ -339,7 +339,7 @@ h6 {
 }
 
 .features__display-none {
-  opacity: 0;
+  display: none;
 }
 
 .features__search-image {
