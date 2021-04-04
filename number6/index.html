@@ -14,25 +14,30 @@
   <body>
     <header>
       <nav>
+        <div class="mobile-wrapper">
         <div class="mobile-nav">
           <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
-        </div>
-
-        <div class="desktop-nav">
-        <div class="container">
-          <div class="flex-container-row">
-          <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
-          <div class="desktop__links">
-            <a class="nav-links" href="#">Features</a>
-            <a class="nav-links" href="#">Pricing</a>
-            <a class="nav-links" href="#">Contact</a>
-            <button type="button" class="site-button--accent" onclick="location.href='#'">
-              Login
-            </button>
+          <div class="hamburger-menu">
+            <button type="button" class="hamburger-button" onclick=""><img src="./images/icon-hamburger.svg" alt=""></button>
           </div>
         </div>
-        </div>
       </div>
+
+        <div class="desktop-nav">
+          <div class="container">
+            <div class="flex-container-row">
+              <div class="logo"><img src="./images/logo-bookmark.svg" alt="bookmark logo" /></div>
+              <div class="desktop__links">
+                <a class="nav-links" href="#">Features</a>
+                <a class="nav-links" href="#">Pricing</a>
+                <a class="nav-links" href="#">Contact</a>
+                <button type="button" class="site-button--accent" onclick="location.href='#'">
+                  Login
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -72,21 +77,41 @@
               </p>
             </div>
 
-              <div class="features__nav flex-container-row">
-                <button type="button" class="features__nav-button bookmark-button features__nav-button--is-active" onclick="featureClick('bookmark')">
-                  Simple Bookmarking
-                </button>
-                <button type="button" class="features__nav-button search-button" onclick="featureClick('search')">
-                  Speedy Searching
-                </button>
-                <button type="button" class="features__nav-button share-button" onclick="featureClick('share')">
-                  Easy Sharing
-                </button>
-              </div>
+            <div class="features__nav flex-container-features">
+              <div class="straight-line"></div>
+
+              <button
+                type="button"
+                class="features__nav-button bookmark-button features__nav-button--is-active"
+                onclick="featureClick('bookmark')"
+              >
+                Simple Bookmarking
+              </button>
+              <div class="straight-line"></div>
+
+              <button
+                type="button"
+                class="features__nav-button search-button"
+                onclick="featureClick('search')"
+              >
+                Speedy Searching
+              </button>
+              <div class="straight-line"></div>
+
+              <button
+                type="button"
+                class="features__nav-button share-button"
+                onclick="featureClick('share')"
+              >
+                Easy Sharing
+              </button>
+              <div class="straight-line"></div>
+
+            </div>
           </div>
 
           <div class="features__bookmark">
-            <div class="flex-container-row">
+            <div class="flex-container-features">
               <div class="features__bookmark-image">
                 <img src="./images/illustration-features-tab-1.svg" alt="bookmark tab image" />
               </div>
@@ -100,12 +125,10 @@
                 <button type="button" class="site-button">More Info</button>
               </div>
             </div>
-
           </div>
 
           <div class="features__search features__display-none">
-
-            <div class="flex-container-row">
+            <div class="flex-container-features">
               <div class="features__search-image">
                 <img src="./images/illustration-features-tab-2.svg" alt="search tab image" />
               </div>
@@ -119,12 +142,10 @@
                 <button type="button" class="site-button">More Info</button>
               </div>
             </div>
-
           </div>
 
           <div class="features__share features__display-none">
-
-            <div class="flex-container-row">
+            <div class="flex-container-features">
               <div class="features__share-image">
                 <img src="./images/illustration-features-tab-3.svg" alt="share tab image" />
               </div>
@@ -145,45 +166,51 @@
       <section class="download">
         <div class="container">
           <div class="flex-container-column">
-          <div class="download__text download__text--narrow">
-            <h2>Download the extension</h2>
+            <div class="download__text download__text--narrow">
+              <h2>Download the extension</h2>
 
-            <p>
-              We’ve got more browsers in the pipeline. Please do let us know if you’ve got a
-              favourite you’d like us to prioritize.
-            </p>
-          </div>
+              <p>
+                We’ve got more browsers in the pipeline. Please do let us know if you’ve got a
+                favourite you’d like us to prioritize.
+              </p>
+            </div>
           </div>
 
-          <div class="desktop__cards flex-container-row-desktop__cards">
+          <div class="desktop__cards flex-container-desktop__cards">
             <div class="desktop__cards-chrome">
               <div class="flex-container-column">
-              <img src="./images/logo-chrome.svg" alt="chrome logo" />
-              <h3>Add to Chrome</h3>
-              <p>Minimum version 62</p>
-              <img class="dash" src="./images/bg-dots.svg" alt="">
-              <button type="button" class="site-button desktop__cards-button">Add & Install Extension</button>
-            </div>
+                <img src="./images/logo-chrome.svg" alt="chrome logo" />
+                <h3>Add to Chrome</h3>
+                <p>Minimum version 62</p>
+                <img class="dash" src="./images/bg-dots.svg" alt="" />
+                <button type="button" class="site-button desktop__cards-button">
+                  Add & Install Extension
+                </button>
+              </div>
             </div>
 
             <div class="desktop__cards-firefox">
               <div class="flex-container-column">
-              <img src="./images/logo-firefox.svg" alt="firefox logo" />
-              <h3>Add to Firefox</h3>
-              <p>Minimum version 55</p>
-              <img class="dash" src="./images/bg-dots.svg" alt="">
-              <button type="button" class="site-button desktop__cards-button">Add & Install Extension</button>
-            </div>
+                <img src="./images/logo-firefox.svg" alt="firefox logo" />
+                <h3>Add to Firefox</h3>
+                <p>Minimum version 55</p>
+                <img class="dash" src="./images/bg-dots.svg" alt="" />
+                <button type="button" class="site-button desktop__cards-button">
+                  Add & Install Extension
+                </button>
+              </div>
             </div>
 
             <div class="desktop__cards-opera">
               <div class="flex-container-column">
-              <img src="./images/logo-opera.svg" alt="opera logo" />
-              <h3>Add to Opera</h3>
-              <p>Minimum version 46</p>
-              <img class="dash" src="./images/bg-dots.svg" alt="">
-              <button type="button" class="site-button desktop__cards-button">Add & Install Extension</button>
-            </div>
+                <img src="./images/logo-opera.svg" alt="opera logo" />
+                <h3>Add to Opera</h3>
+                <p>Minimum version 46</p>
+                <img class="dash" src="./images/bg-dots.svg" alt="" />
+                <button type="button" class="site-button desktop__cards-button">
+                  Add & Install Extension
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -198,51 +225,96 @@
               feel free to email us.
             </p>
           </div>
+          <div class="straight-line"></div>
           <div class="faq__item">
             <!-- Question 1 -->
-            <button type="button" class="faq__item-question site-button">What is Bookmark?</button>
+            <button
+              type="button"
+              class="faq__item-question site-button button-one"
+              onclick="faqButton('question1')"
+            >
+              What is Bookmark?
+            </button>
+            
+            <svg class="faq__item-arrow arrow-question-one" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
             <!-- Answer 1 -->
-            <p class="faq__item-answer">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
-              ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-            </p>
+            <div class="answer-one">
+              <div class="answer-one__content">
+                <p class="faq__item-answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo
+                  eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                </p>
+              </div>
+            </div>
           </div>
+          <div class="straight-line"></div>
           <div class="faq__item">
             <!-- Question 2 -->
-            <button type="button" class="faq__item-question site-button">
+            <button
+              type="button"
+              class="faq__item-question site-button button-two"
+              onclick="faqButton('question2')"
+            >
               How can I request a new browser?
             </button>
+            <svg class="faq__item-arrow arrow-question-two" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
             <!-- Answer 2 -->
-            <p class="faq__item-answer">
-              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
-              ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris
-              augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
-              convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-            </p>
+            <div class="answer-two">
+              <div class="answer-two__content">
+              <p class="faq__item-answer">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies.
+                Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+                imperdiet.
+              </p>
+            </div>
+            </div>
           </div>
+          <div class="straight-line"></div>
           <div class="faq__item">
             <!-- Question 3 -->
-            <button type="button" class="faq__item-question site-button">
+            <button
+              type="button"
+              class="faq__item-question site-button button-three"
+              onclick="faqButton('question3')"
+            >
               Is there a mobile app?
             </button>
+            <svg class="faq__item-arrow arrow-question-three" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
             <!-- Answer 3 -->
-            <p class="faq__item-answer">
-              Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
-              condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet
-              pharetra purus. Sed sollicitudin ex et ultricies bibendum.
-            </p>
+            <div class="answer-three">
+              <div class="answer-three__content">
+              <p class="faq__item-answer">
+                Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor,
+                ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet
+                pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+              </p>
+            </div>
+            </div>
           </div>
+          <div class="straight-line"></div>
           <div class="faq__item">
             <!-- Question 4 -->
-            <button type="submit" class="faq__item-question site-button">
+            <button
+              type="submit"
+              class="faq__item-question site-button button-four"
+              onclick="faqButton('question4')"
+            >
               What about other Chromium browsers?
             </button>
+            <svg class="faq__item-arrow arrow-question-four" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
             <!-- Answer 4 -->
-            <p class="faq__item-answer">
-              Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
-              dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit. More Info
-            </p>
+            <div class="answer-four">
+              <div class="answer-four__content">
+              <p class="faq__item-answer">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
+                dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit. More Info
+              </p>
+            </div>
+            </div>
           </div>
+          <div class="straight-line"></div>
         </div>
       </section>
 
@@ -261,20 +333,20 @@
 
     <footer>
       <div class="container">
-      <div class="flex-container-row">
-        <img src="./images/logo-bookmark.svg" alt="bookmark-site logo in footer" />
-        <div class="footer__links">
-          <a href="#" class="footer__links-item">Features</a>
-          <a href="#" class="footer__links-item">Pricing</a>
-          <a href="#" class="footer__links-item">Contact</a>
-        </div>
+        <div class="flex-container-row">
+          <img src="./images/logo-bookmark.svg" alt="bookmark-site logo in footer" />
+          <div class="footer__links">
+            <a href="#" class="footer__links-item">Features</a>
+            <a href="#" class="footer__links-item">Pricing</a>
+            <a href="#" class="footer__links-item">Contact</a>
+          </div>
 
-        <div class="footer__icons">
-          <img src="./images/icon-facebook.svg" alt="facebook icon" />
-          <img src="./images/icon-twitter.svg" alt="twitter icon" />
+          <div class="footer__icons">
+            <img src="./images/icon-facebook.svg" alt="facebook icon" />
+            <img src="./images/icon-twitter.svg" alt="twitter icon" />
+          </div>
         </div>
       </div>
-    </div>
     </footer>
     <script defer="" src="./app.js"></script>
   </body>
