@@ -21,6 +21,10 @@ span {
   margin: 0;
 }
 
+section {
+  padding: 100px 0;
+}
+
 /* make images responsive */
 img {
   display: block;
@@ -41,6 +45,8 @@ body {
 p {
   display: block;
   font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.875rem;
 }
 
 hr {
@@ -51,8 +57,9 @@ hr {
 
 h1 {
   font-family: "Public Sans";
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
 }
 
 h2 {
@@ -94,8 +101,12 @@ h6 {
 header {
   display: flex;
   align-items: center;
-  height: 6rem;
+  height: 5rem;
   background-color: var(--color-neutral-white);
+}
+
+main {
+  overflow: hidden;
 }
 
 /* footer {
@@ -103,7 +114,7 @@ header {
 } */
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -118,6 +129,14 @@ header {
 
 .easybank--bg {
   background-color: var(--color-neutral-light-grayish-blue);
+}
+
+.hero__text h1 {
+  color: var(--color-primary-dark-blue);
+}
+
+.hero__text p {
+  color: var(--color-neutral-grayish-blue);
 }
 
 .articles__text--small {
@@ -159,4 +178,35 @@ header {
     margin: 0 auto;
   }
 
+  .hero {
+    min-height: 655px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+
+  .hero-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .hero__text {
+    flex: 0 1 28rem;
+  }
+
+  .hero__image {
+    margin-top: 50px;
+    transform: translateX(278px);
+    right: 0;
+    position: absolute;
+  }
+
+  .hero__image img {
+    max-width: none;
+  }
 }
