@@ -35,13 +35,14 @@ header {
 
 .web-element a {
   display: block;
-  padding: 1.5rem;
+  padding: 2rem;
   color: white;
-
+  transition: 0.3s ease-in-out;
 }
 
 .web-element a:hover {
-  color: #dfabea
+  color: #dfabea;
+  transition: 0.3s ease-in-out;
 }
 
 .flex-container {
@@ -53,7 +54,7 @@ header {
 }
 
 .web-element {
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   margin: 10px;
   border: 2px solid #dfabea;
 }
@@ -105,11 +106,13 @@ picture img {
 
 .footer-content svg:hover {
   fill: #dfabea;
+  transition: 0.3 ease-in-out;
 }
 
 .footer-content svg {
   fill: white;
   height: auto;
   width: 64px;
+  transition: 0.3s ease-in-out;
 }
 
