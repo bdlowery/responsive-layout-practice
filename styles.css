@@ -104,15 +104,16 @@ picture img {
   align-items: center;
 }
 
-.footer-content svg:hover {
+.footer-svg:hover {
   fill: #dfabea;
-  transition: 0.3 ease-in-out;
+  transition: fill 0.3s ease-in-out;
+
 }
 
-.footer-content svg {
+.footer-svg {
   fill: white;
   height: auto;
   width: 64px;
-  transition: 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 
