@@ -159,24 +159,26 @@ main {
 
 .easybank__text h2 {
   font-size: 2.5rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1rem;
 }
+
 .easybank__online-text h3,
 .easybank__budgeting-text h3,
 .easybank__onboarding-text h3,
 .easybank__api-text h3 {
   font-size: 1.5rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1rem;
 }
 
 .articles__text h4 {
   font-size: 1.1rem;
   padding-bottom: 1rem;
   padding-top: 0.7rem;
+  margin-bottom: 0;
 }
 
 .articles__text--normal {
-  font-size: 0.875rem;
+  font-size: 0.938rem;
   margin-bottom: 0;
 }
 
@@ -230,7 +232,7 @@ main {
 }
 
 .site-button:hover {
-  opacity: 0.6;
+  opacity: 0.4;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -395,8 +397,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   align-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 .articles__card {
@@ -470,8 +474,17 @@ footer {
   align-items: center;
 }
 
-.footer__branding-social img + img {
+.footer__branding-social a + a {
   margin-left: 1rem;
+}
+
+.footer__branding-social svg * {
+  transition: .3s ease-in-out;
+}
+
+.footer__branding-social svg:hover * {
+  fill: #31d35c;
+  transition: .3s ease-in-out;
 }
 
 .footer-flex-nav-container {
@@ -486,6 +499,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 0;
+  font-size: 1rem;
 }
 
 .footer__nav-links {
@@ -495,6 +509,19 @@ footer {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  color: var(--color-neutral-white);
+}
+
+.footer__nav-links a {
+  text-decoration:none;
+  color: var(--color-neutral-white);
+  transition: 0.2s ease-in-out;
+  padding-top: 1rem;
+}
+
+.footer__nav-links a:hover {
+  color: var(--color-primary-lime-green);
+  transition: 0.2s ease-in-out;
 }
 
 .footer__nav-links + .footer__nav-links {
@@ -508,15 +535,16 @@ footer {
 }
 
 .copyright {
+  color: var(--color-neutral-grayish-blue);
   margin-bottom: 0;
 }
 
 .footer__nav-item + .footer__nav-item{
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .footer__invite > * + * {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 @media (min-width: 375px) {
@@ -565,6 +593,30 @@ footer {
   .articles .container h2{
     font-size: 2.5rem;
 }
+
+.articles-flex-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: none;
+}
+
+.articles__card {
+  max-width: 300px
+}
+
+.articles__card + .articles-two {
+  margin-top: 0;
+}
+
+.articles-two, .articles-four {
+  margin-left: 2rem;
+}
+
+.articles-three, .articles-four {
+  margin-top: 2rem;  
+}
+
+
 }
 
 @media (min-width: 1024px) {
@@ -579,7 +631,12 @@ footer {
   .hero__text {
     max-width: 500px;
   }
+
+  .articles-flex-container {
+    max-width: 750px;
+  }
 }
+
 
 @media (min-width: 1200px) {
   section {
@@ -638,6 +695,15 @@ footer {
     padding: 0;
     margin: 0;
     position: relative;
+  }
+
+  .nav__list a {
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav__list a:hover {
+    color: var(--color-primary-lime-green);
+    transition: 0.2s ease-in-out;
   }
 
   .nav-item {
@@ -715,6 +781,7 @@ footer {
 
   .hero__text {
     flex: 0 1 28rem;
+    text-align: left;
   }
 
   .hero__image {
@@ -743,12 +810,16 @@ footer {
   }
 
   .easybank-flex > * + * {
-    margin-left: 2rem;
+    margin-left: 3.5rem;
   }
 
   .easybank__text {
     max-width: none;
     text-align: left;
+  }
+
+  .easybank__text h2 {
+    margin-bottom: 1.875rem;
   }
 
   .easybank__icon-img img {
@@ -763,9 +834,10 @@ footer {
     max-width: 650px;
   }
 
+
   .articles__card + .articles__card {
     margin-top: 0rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 
   
@@ -773,7 +845,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
+    max-width: none;
+    flex-wrap: nowrap;
   }
   
   .footer-flex-container {
@@ -788,7 +862,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
   }
   
@@ -800,6 +874,7 @@ footer {
 
   .footer__nav-links + .footer__nav-links {
     margin-top: 0rem;
+    margin-left: 10rem;
   }
 
   .footer__nav-links {
@@ -810,6 +885,15 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+  }
+
+  .footer__branding {
+    align-items: flex-start;
+    margin-right: 10rem;
+  }
+
+  .footer__branding > * + * {
+    margin-top: 3rem;
   }
 
 }
