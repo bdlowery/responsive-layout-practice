@@ -840,7 +840,10 @@ footer {
     margin-left: 2rem;
   }
 
-  
+  .articles__card {
+    max-width: none;
+  }
+
   .articles-flex-container {
     display: flex;
     flex-direction: row;
