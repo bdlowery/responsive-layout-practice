@@ -22,7 +22,7 @@ span {
 }
 
 section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 /* make images responsive */
@@ -64,20 +64,23 @@ h1 {
 
 h2 {
   font-family: "Public Sans";
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
 }
 
 h3 {
   font-family: "Public Sans";
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
 }
 
 h4 {
   font-family: "Public Sans";
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
 }
 
 h5,
@@ -97,7 +100,6 @@ h6 {
   --color-neutral-white: hsl(0, 0%, 100%);
 }
 
-
 header {
   display: flex;
   align-items: center;
@@ -114,21 +116,26 @@ main {
 } */
 
 .container {
-  width: 80%;
+  width: 85%;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-.destop-nav {
+.desktop-nav {
   display: none;
 }
+.mobile-nav {
+  display: block;
+}
 
-.link, .link-long {
-  color:var(--color-neutral-grayish-blue);
+.link,
+.link-long {
+  color: var(--color-neutral-grayish-blue);
   text-decoration: none;
 }
 
-.hero--bg, .articles--bg{
+.hero--bg,
+.articles--bg {
   background-color: var(--color-neutral-very-light-gray);
 }
 
@@ -136,26 +143,86 @@ main {
   background-color: var(--color-neutral-light-grayish-blue);
 }
 
-.hero__text h1 {
-  color: var(--color-primary-dark-blue);
+.footer-bg {
+  background-color: var(--color-primary-dark-blue);
 }
 
-.hero__text p {
-  color: var(--color-neutral-grayish-blue);
+.hero__text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero__text h1 {
+  font-size: 2rem;
+  margin-bottom: 1.175rem;
+}
+
+.easybank__text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.875rem;
+}
+.easybank__online-text h3,
+.easybank__budgeting-text h3,
+.easybank__onboarding-text h3,
+.easybank__api-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.875rem;
+}
+
+.articles__text h4 {
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+  padding-top: 0.7rem;
+}
+
+.articles__text--normal {
+  font-size: 0.875rem;
+  margin-bottom: 0;
 }
 
 .articles__text--small {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  margin-bottom: 0;
 }
+
+.articles .container h2{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hero__text h1,
+.easybank__text h2,
+.easybank__online-text h3,
+.easybank__budgeting-text h3,
+.easybank__onboarding-text h3,
+.easybank__api-text h3{
+  color: var(--color-primary-dark-blue);
+}
+
+.hero__text p,
+.easybank__text p,
+.easybank__online-text p,
+.easybank__budgeting-text p,
+.easybank__onboarding-text p,
+.easybank__api-text p,
+.articles__text p {
+  color: var(--color-neutral-grayish-blue);
+}
+
 
 .site-button {
   border: none;
   border-radius: 2rem;
-  font-family:inherit;
+  font-family: inherit;
   font-size: 14px;
   padding: 0.8rem 2rem;
-  background: linear-gradient(90deg, var(--color-primary-lime-green), 50%, var(--color-primary-bright-cyan));
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-lime-green),
+    40%,
+    var(--color-primary-bright-cyan)
+  );
   color: var(--color-neutral-white);
   font-weight: 600;
   text-shadow: 0 0px 10px #000;
@@ -167,8 +234,387 @@ main {
   transition: opacity 0.2s ease-in-out;
 }
 
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--spring .hamburger-inner {
+  top: 2px;
+  transition: background-color 0s 0.13s linear;
+}
+.hamburger--spring .hamburger-inner::before {
+  top: 10px;
+  transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spring .hamburger-inner::after {
+  top: 20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring.is-active .hamburger-inner {
+  transition-delay: 0.22s;
+  background-color: transparent !important;
+}
+.hamburger--spring.is-active .hamburger-inner::before {
+  top: 0;
+  transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--spring.is-active .hamburger-inner::after {
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+
+.mobile-nav-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.hero-flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  align-content: center;
+}
+
+.hero__image {
+  margin-bottom: 1rem;
+}
+
+.hero__image {
+  margin-top: -197px;
+}
+
+.hero__text {
+  max-width: 450px;
+}
+
+.easybank-flex {
+  margin-top: 4.688rem;
+}
+
+.easybank__icon-img {
+  margin-bottom: 1.5rem;
+}
+
+.easybank__text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.easybank-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.easybank__icon-img img {
+  margin: 0 auto;
+}
+
+.easybank-flex > * + * {
+  margin-top: 1rem;
+}
+
+
+.articles-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.articles__card {
+  background-color: var(--color-neutral-white);
+}
+
+.articles__card + .articles__card {
+  margin-top: 1.5rem;
+}
+
+.articles__image {
+  height: 15rem;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.articles__image img {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.articles__text {
+  padding: 2rem;
+}
+
+.articles__text-link {
+  color: var(--color-primary-dark-blue);
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+
+.articles__text-link:hover{
+  color: var(--color-primary-lime-green);
+  transition: color 0.25s ease-in-out;
+}
+
+footer {
+  padding: 45px 0;
+}
+
+.footer-container {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.footer__branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__branding > * + * {
+  margin-top: 2rem;
+}
+
+.footer__branding-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer__branding-social img + img {
+  margin-left: 1rem;
+}
+
+.footer-flex-nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+}
+
+.footer__nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__nav-links + .footer__nav-links {
+  margin-top: 1rem;
+}
+
+.footer__invite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright {
+  margin-bottom: 0;
+}
+
+.footer__nav-item + .footer__nav-item{
+  margin-top: 1rem;
+}
+
+.footer__invite > * + * {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 375px) {
+  .hero__image {
+    margin-top: -215px;
+  }
+
+  .hero__text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 414px) {
+  .hero__image {
+    margin-top: -225px;
+  }
+
+  .hero__text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 75px 0;
+  }
+  .hero__image {
+    margin-top: -330px;
+  }
+  .hero__text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero__text {
+    max-width: 500px;
+  }
+
+  .easybank-text-container {
+    max-width: 400px;
+  }
+
+  .easybank__text {
+    max-width: 450px;
+  }
+
+  .articles .container h2{
+    font-size: 2.5rem;
+}
+}
+
+@media (min-width: 1024px) {
+  .hero__image {
+    margin-top: -370px;
+  }
+
+  .hero__text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero__text {
+    max-width: 500px;
+  }
+}
 
 @media (min-width: 1200px) {
+  section {
+    padding: 100px 0;
+  }
+  .desktop-nav {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .hero__text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .easybank__text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .easybank__online-text h3,
+  .easybank__budgeting-text h3,
+  .easybank__onboarding-text h3,
+  .easybank__api-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .articles__text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
   .nav-flex-container {
     display: flex;
     flex-direction: row;
@@ -182,7 +628,7 @@ main {
     justify-content: space-between;
     flex-grow: 1;
   }
-  
+
   .nav__list {
     display: flex;
     flex-direction: row;
@@ -197,7 +643,7 @@ main {
   .nav-item {
     position: relative;
   }
-  
+
   .nav__item + .nav__item {
     margin-left: 1.5rem;
   }
@@ -212,12 +658,17 @@ main {
   }
 
   .link:before {
-    content: '';
-    position:absolute;
+    content: "";
+    position: absolute;
     height: 3px;
     top: 57px;
     width: 0;
-    background: linear-gradient(90deg, var(--color-primary-lime-green), 50%, var(--color-primary-bright-cyan));
+    background: linear-gradient(
+      90deg,
+      var(--color-primary-lime-green),
+      50%,
+      var(--color-primary-bright-cyan)
+    );
     transition: 0.2s ease-in-out;
   }
 
@@ -227,12 +678,17 @@ main {
   }
 
   .link-long:before {
-    content: '';
-    position:absolute;
+    content: "";
+    position: absolute;
     height: 3px;
     top: 57px;
     width: 0;
-    background: linear-gradient(90deg, var(--color-primary-lime-green), 50%, var(--color-primary-bright-cyan));
+    background: linear-gradient(
+      90deg,
+      var(--color-primary-lime-green),
+      50%,
+      var(--color-primary-bright-cyan)
+    );
     transition: 0.2s ease-in-out;
   }
 
@@ -240,7 +696,6 @@ main {
     width: 67px;
     transition: 0.2s ease-in-out;
   }
-
 
   .hero {
     min-height: 655px;
@@ -256,7 +711,6 @@ main {
     align-content: center;
     align-items: center;
     position: relative;
-    
   }
 
   .hero__text {
@@ -265,12 +719,97 @@ main {
 
   .hero__image {
     margin-top: 50px;
-    transform: translateX(278px);
+    transform: translateX(238px);
     right: 0;
     position: absolute;
+    margin-bottom: 0;
   }
 
   .hero__image img {
     max-width: none;
   }
+
+  .easybank-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: left;
+    flex: 1 0 100%;
+  }
+
+  .easybank__icon-img {
+    margin-bottom: 2.5rem;
+  }
+
+  .easybank-flex > * + * {
+    margin-left: 2rem;
+  }
+
+  .easybank__text {
+    max-width: none;
+    text-align: left;
+  }
+
+  .easybank__icon-img img {
+    margin:0;
+  }
+
+  .easybank-flex > * + * {
+    margin-top: 0rem;
+  }
+
+  .easybank__text p {
+    max-width: 650px;
+  }
+
+  .articles__card + .articles__card {
+    margin-top: 0rem;
+    margin-left: 1rem;
+  }
+
+  
+  .articles-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-flex-nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer__nav {
+    flex-direction: row;
+    padding: 0;
+
+  }
+
+  .footer__nav-links + .footer__nav-links {
+    margin-top: 0rem;
+  }
+
+  .footer__nav-links {
+    align-items: flex-start
+  }
+
+  .footer__invite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
 }
