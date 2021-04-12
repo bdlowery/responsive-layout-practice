@@ -198,7 +198,8 @@ main {
 .easybank__online-text h3,
 .easybank__budgeting-text h3,
 .easybank__onboarding-text h3,
-.easybank__api-text h3{
+.easybank__api-text h3,
+.articles .container h2{
   color: var(--color-primary-dark-blue);
 }
 
@@ -897,6 +898,10 @@ footer {
 
   .footer__branding > * + * {
     margin-top: 3rem;
+  }
+
+  .articles .container h2 {
+    text-align: left;
   }
 
 }
