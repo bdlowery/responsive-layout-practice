@@ -373,9 +373,6 @@ main {
   position: relative;
 }
 
-.easybank-flex {
-  margin-top: 4.688rem;
-}
 
 .easybank__icon-img {
   margin-bottom: 1.5rem;
@@ -392,6 +389,7 @@ main {
   align-items: center;
   align-content: center;
   text-align: center;
+  margin-top: 4.688rem;
 }
 
 .easybank__icon-img img {
@@ -545,6 +543,7 @@ footer {
 .copyright {
   color: var(--color-neutral-grayish-blue);
   margin-bottom: 0;
+  font-size: 0.938rem;
 }
 
 .footer__nav-item + .footer__nav-item {
@@ -569,6 +568,10 @@ footer {
   z-index: 0;
 }
 
+.easybank-text-container {
+  max-width: 400px;
+}
+
 @media (min-width: 375px) {
   .hero__image img {
     margin-top: -165px;
@@ -580,7 +583,7 @@ footer {
 }
 
 @media (min-width: 414px) {
-  .hero__image img{
+  .hero__image img {
     margin-top: -175px;
   }
 
@@ -602,10 +605,6 @@ footer {
 
   .hero__text {
     max-width: 500px;
-  }
-
-  .easybank-text-container {
-    max-width: 400px;
   }
 
   .easybank__text {
@@ -639,6 +638,68 @@ footer {
   .articles-four {
     margin-top: 2rem;
   }
+
+  .easybank-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 650px;
+    align-items: stretch;
+    margin: 0 auto;
+  }
+
+  .easybank-card {
+    margin: 0 auto;
+    max-width: 290px;
+  }
+
+  .easybank-flex > * + * {
+    margin-top: 0;
+  }
+
+  .footer-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-flex-nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__nav {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .footer__nav-links + .footer__nav-links {
+    margin-top: 0rem;
+    margin-left: 2rem;
+  }
+
+  .footer__nav-links {
+    align-items: flex-start;
+  }
+
+  .footer__invite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .footer__branding {
+    align-items: flex-start;
+    margin-right: 2rem;
+  }
+
+  .footer__branding > * + * {
+    margin-top: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -657,6 +718,15 @@ footer {
   .articles-flex-container {
     max-width: 750px;
   }
+
+  .footer__nav-links + .footer__nav-links {
+    margin-left: 7rem;
+  }
+
+  .footer__branding {
+    margin-right: 5rem;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -808,7 +878,7 @@ footer {
     position: relative;
     margin-bottom: 0;
   }
-  
+
   .hero__image img {
     position: absolute;
     margin-top: -450px;
@@ -824,6 +894,9 @@ footer {
     align-content: flex-start;
     text-align: left;
     flex: 1 0 100%;
+    flex-wrap: nowrap;
+    max-width: none;
+    margin-top: 4.688rem
   }
 
   .easybank__icon-img {
@@ -873,50 +946,6 @@ footer {
     flex-wrap: nowrap;
   }
 
-  .footer-flex-container {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .footer-flex-nav-container {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer__nav {
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .footer__nav-links + .footer__nav-links {
-    margin-top: 0rem;
-    margin-left: 10rem;
-  }
-
-  .footer__nav-links {
-    align-items: flex-start;
-  }
-
-  .footer__invite {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .footer__branding {
-    align-items: flex-start;
-    margin-right: 10rem;
-  }
-
-  .footer__branding > * + * {
-    margin-top: 3rem;
-  }
 
   .articles .container h2 {
     text-align: left;
@@ -934,5 +963,14 @@ footer {
     height: 915px;
     width: 100%;
     z-index: 0;
+  }
+
+  .footer__nav-links + .footer__nav-links {
+    margin-left: 10rem;
+  }
+
+  .footer__branding {
+    align-items: flex-start;
+    margin-right: 10rem;
   }
 }
