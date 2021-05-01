@@ -17,7 +17,9 @@ h6,
 p,
 a,
 li,
+ul,
 span {
+  padding: 0;
   margin: 0;
 }
 
@@ -38,6 +40,10 @@ section {
 
 header {
   padding: 35px 0;
+}
+
+footer {
+  padding-top: 35px;
 }
 
 /* make images responsive */
@@ -76,14 +82,14 @@ h1 {
 
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-neutral-very-dark-blue);
+  color: var(--color-primary-dark-blue);
 }
 
 h2 {
   font-family: "Be Vietnam";
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--color-neutral-very-dark-blue);
+  color: var(--color-primary-dark-blue);
 }
 
 h3 {
@@ -92,14 +98,14 @@ h3 {
   font-weight: bold;
   margin-bottom: 1rem;
   margin-top: 4rem;
-  color: var(--color-neutral-very-dark-blue);
+  color: var(--color-primary-dark-blue);
 }
 
 h4 {
   font-family: "Be Vietnam";
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-neutral-very-dark-blue);
+  color: var(--color-primary-dark-blue);
 }
 
 h5,
@@ -112,6 +118,18 @@ h6 {
 
 .text-center {
   text-align: center;
+}
+
+.site-button {
+  font-family: "Be Vietnam", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f4f4f4;
+  background-color: var(--color-primary-bright-red);
+  border: 1px solid var(--color-primary-bright-red);
+  border-radius: 2rem;
+  padding: 0.8rem 2.2rem;
+
 }
 
 #hero {
@@ -153,9 +171,19 @@ h6 {
   text-align: center;
 }
 
+.bullet-point-desktop {
+  display: none;
+}
+
 .whats-different-flex-container {
   display: flex;
   flex-direction: column;
+}
+
+.container-whats-different {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .whats-different__features {
@@ -189,6 +217,7 @@ h6 {
 
 .whats-different__text h4 {
   background-color: var(--color-neautral-very-pale-red);
+  color: var(--color-primary-dark-blue);
   border-radius: 1rem 0 0 1rem;
 }
 
@@ -259,6 +288,63 @@ h6 {
   display: none;
 }
 
+#simplify-team {
+  background: url(./images/bg-simplify-section-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-color: var(--color-primary-bright-red);
+  padding: 100px 0;
+}
+
+.simplify-team-header {
+  color: #f4f4f4;
+}
+
+.simplify-team-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.site-button--accent {
+  font-family: "Be Vietnam", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-primary-bright-red);
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  border-radius: 2rem;
+  padding: 0.8rem 2.2rem;
+}
+
+footer {
+  background: var(--color-neutral-very-dark-blue);
+}
+
+.site-button-footer {
+  font-family: "Be Vietnam", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f4f4f4;
+  background-color: var(--color-primary-bright-red);
+  border: 1px solid var(--color-primary-bright-red);
+  border-radius: 2rem;
+  padding: 0.6rem 1.75rem;
+}
+
+.inbox-input {
+  font-family: "Be Vietnam", sans-serif, Arial;
+  font-size: 12px;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+}
+
 @media (min-width: 375px) {
   h1 {
     font-size: 2.4rem;
@@ -267,9 +353,16 @@ h6 {
   h2 {
     font-size: 1.9rem;
   }
+  .site-button--accent {
+    margin-top: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
   .swiper-button-next {
     display: block;
   }
@@ -284,6 +377,92 @@ h6 {
 
   header {
     padding: 50px 0;
+  }
+
+  footer {
+    padding-top: 50px;
+  }
+
+  .bullet-point-desktop {
+    display: block;
+    color: #f4f4f4;
+    padding-top: 0.6rem;
+    padding-right: 1.3rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.3rem;
+  
+    border-radius: 2rem;
+    background-color: var(--color-primary-bright-red);
+    align-self: flex-start;
+    font-weight: 700;
+  }
+
+  .whats-different-flex-container {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+
+  .whats-different-features-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .whats-different__text--main {
+    text-align: left;
+  }
+
+  .whats-different__text--main p {
+    max-width: 350px;
+  }
+
+  .whats-different-features-container > * + * {
+    margin-left: 1rem;
+  }
+
+  .container-whats-different {
+    width: auto;
+    max-width: 500px;
+    margin: 0;
+
+  }
+
+  .whats-different__features {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    max-width: 460px;
+  }
+
+  .whats-different__text h4 {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .bullet-point {
+    display: none;
+  }
+
+  #simplify-team {
+    padding: 50px;
+  }
+
+  .simplify-team-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+  }
+
+  .simplify-team-header {
+    max-width: 500px;
+  }
+
+  .site-button--accent {
+    margin-top: 0;
   }
 }
 
