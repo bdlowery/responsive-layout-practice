@@ -14,25 +14,38 @@
   </head>
   <body>
     <header>
+
+      <div class="mobile-wrapper">
+        <img class="mobile-logo" src="./images/logo.svg" alt="">
+        <div class="hamburger-menu-container">
+          <button class="hamburger hamburger--spring" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
       <nav>
         <div class="nav-container">
           <div class="nav-flex-container">
-            <img src="./images/logo.svg" alt="manage logo" />
-            <ul class="nav__list nav__list-flex">
-              <li class="nav__list-item">Pricing</li>
-              <li class="nav__list-item">Product</li>
-              <li class="nav__list-item">About Us</li>
-              <li class="nav__list-item">Careers</li>
-              <li class="nav__list-item">Community</li>
+            <img class="desktop-logo" src="./images/logo.svg" alt="manage logo" />
+            <ul class="nav__list nav__list-flex nav__list-primary">
+              <li class="nav__list-item"><a class="link" href="#">Pricing</a></li>
+              <li class="nav__list-item"><a class="link" href="#">Product</a></li>
+              <li class="nav__list-item"><a class="link" href="#">About Us</a></li>
+              <li class="nav__list-item"><a class="link" href="#">Careers</a></li>
+              <li class="nav__list-item"><a class="link" href="#">Community</a></li>
             </ul>
             <ul class="nav__list">
               <li class="nav__list-item">
-                <button class="site-button" type="button">Get Started</button>
+                <button class="site-button" id="nav-get-started" type="button">Get Started</button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+
       <div id="hero">
         <div class="container">
           <div class="hero-flex-container">
@@ -66,12 +79,13 @@
                 software is tailor-made for modern digital product teams.
               </p>
             </div>
+            <div class="whats-different__image">
+              <img aria-label="hidden" src="./images/bg-tablet-pattern.svg" alt="">
+            </div>
           </div>
           <div class="whats-different__features">
             <div class="whats-different-features-container">
-              <div class="bullet-point-desktop">
-                01
-              </div>
+              <div class="bullet-point-desktop">01</div>
 
               <div class="whats-different__text">
                 <h4><span class="bullet-point">01</span> Track company-wide progress</h4>
@@ -84,9 +98,7 @@
               </div>
             </div>
             <div class="whats-different-features-container">
-              <div class="bullet-point-desktop">
-                02
-              </div>
+              <div class="bullet-point-desktop">02</div>
               <div class="whats-different__text">
                 <h4><span class="bullet-point">02</span> Advanced built-in reports</h4>
 
@@ -99,9 +111,7 @@
             </div>
 
             <div class="whats-different-features-container">
-              <div class="bullet-point-desktop">
-                03
-              </div>
+              <div class="bullet-point-desktop">03</div>
               <div class="whats-different__text">
                 <h4><span class="bullet-point">03</span> Everything you need in one place</h4>
 
@@ -200,34 +210,32 @@
       <footer>
         <div class="container">
           <div class="footer-inputs">
-        <input
-          type="text"
-          class="inbox-input"
-          name="inbox-input"
-          placeholder="Updates in your inbox…"
-        />
-        <button type="button" class="site-button-footer">GO</button>
-      </div>
+            <input
+              type="text"
+              class="inbox-input"
+              name="inbox-input"
+              placeholder="Updates in your inbox…"
+            />
+            <button type="button" class="site-button-footer">GO</button>
+          </div>
 
-      <div class="footer-nav-container">
-        <ul class="footer-nav-list">
-          <li class="footer-nav__item">Home</li>
-          <li class="footer-nav__item">Pricing</li>
-          <li class="footer-nav__item">Products</li>
-          <li class="footer-nav__item">About Us</li>
-        </ul>
-        <ul class="footer-nav">
-          <li class="footer-nav__item">Careers</li>
-          <li class="footer-nav__item">Community</li>
-          <li class="footer-nav__item">Privacy Policy</li>
-        </ul>
-      </div>
+          <div class="footer-nav-container">
+            <ul class="footer-nav-list">
+              <li class="footer-nav__item">Home</li>
+              <li class="footer-nav__item">Pricing</li>
+              <li class="footer-nav__item">Products</li>
+              <li class="footer-nav__item">About Us</li>
+            </ul>
+            <ul class="footer-nav">
+              <li class="footer-nav__item">Careers</li>
+              <li class="footer-nav__item">Community</li>
+              <li class="footer-nav__item">Privacy Policy</li>
+            </ul>
+          </div>
 
-      <div class="footer-branding">
-
-      </div>
-        Copyright 2020. All Rights Reserved
-      </div>
+          <div class="footer-branding"></div>
+          Copyright 2020. All Rights Reserved
+        </div>
       </footer>
     </main>
 
