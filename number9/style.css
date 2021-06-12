@@ -68,6 +68,20 @@ li {
   list-style: none;
 }
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+      clip-path: inset(50%) !important;  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;            /* 3 */
+}
+
 :root {
   --color-primary-cyan: #2bd0d0;
   --color-primary-dark-violet: #3a3054;
@@ -91,7 +105,7 @@ header {
 }
 
 footer {
-  padding: 35px 0;
+  padding: 60px 0;
 }
 
 body {
@@ -484,11 +498,23 @@ main {
 .cards-logo {
   position: absolute;
   top: -50px;
-
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center; */
   width: 88px;
   height: 88px;
   border-radius: 50%;
   background-color: var(--color-primary-dark-violet);
+}
+
+/* CENTERING image -- use position: relative... or position: absolute... Does it matter? Both achieve the same result... ???  */
+.cards-logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .brand-recognition-card .cards-text {
@@ -582,11 +608,45 @@ footer {
   text-align: center;
 }
 
+
+.resources-footer, .company-footer, .features-footer {
+ margin-top: 3rem;
+}
+
 .footer-item {
   color: var(--color-neutral-gray);
   font-size: 0.938rem;
 }
 
+.footer-item a {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-heading {
+  margin-bottom: 0.8rem;
+}
+
+.footer-item:hover {
+  color: var(--color-primary-cyan);
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.footer-social > * + * {
+  margin-left: 1.5rem;
+}
+
+.footer-social svg:hover * {
+  fill: var(--color-primary-cyan);
+}
 
 @media (min-width: 1024px) {
   h1 {
@@ -784,6 +844,38 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+
+  .nav-flex-footer {
+    flex-direction: row;
+    text-align: start;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .nav-flex-footer > * + * {
+    margin-top: 0;
+  }
+
+  .footer-links-container-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer-social {
+    margin-left: 120px;
+    margin-top: 0;
+  }
+
+  .resources-footer, .company-footer {
+    margin-left: 100px;
+  }
+
+  .resources-footer, .company-footer, .features-footer {
+    margin-top: 0;
+   }
 
 
 }
