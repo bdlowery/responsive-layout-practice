@@ -650,7 +650,7 @@ footer {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   h2 {
@@ -682,6 +682,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 3rem;
   }
 
   .nav-list-primary,
@@ -723,20 +724,21 @@ footer {
 
   .nav-item + .nav-item {
     padding-top: 0;
+    margin-left: 2rem;
   }
 
   .nav-link {
-    font-size: 1.15rem;
+    font-size: 0.938rem;
     font-weight: 700;
-    color: #000;
+    color: var(--color-neutral-gray-violet);
   }
 
   .nav-button {
     background: var(--color-primary-cyan);
     border: 1px solid var(--color-primary-cyan);
     border-radius: 2rem;
-    padding: 0.7rem 3rem;
-    font-size: 1.15rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.938rem;
     font-weight: 700;
     color: #f4f4f4;
   }
@@ -746,8 +748,26 @@ footer {
     flex-direction: row;
   }
 
+  .hero-text p {
+    font-size: 1.375rem;
+  }
+
+  .hero-text {
+    max-width: 53ch;
+  }
+
+  .hero-flex-container {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .hero-flex-container > * + * {
+    margin-bottom: 0;
+    margin-left: 8rem;
+  }
+
   .hero-image img {
-    max-width: 100%;
+    max-width: 150%;
   }
 
   #features {
@@ -785,6 +805,7 @@ footer {
 
   .shorten-link-button {
     padding: 1rem 2.7rem;
+    font-size: 1.25rem;
   }
 
   .shorten-link-input + .shorten-link-button {
