@@ -389,6 +389,7 @@ main {
 }
 
 .hero-image img {
+  margin: auto;
   max-width: 130%;
 }
 
@@ -1029,7 +1030,7 @@ footer {
     position: absolute;
     background-color: var(--color-primary-cyan);
     height: 8px;
-    width: 1000px;
+    width: 900px;
     top: 160px;
     left: auto;
     margin-left: auto;
